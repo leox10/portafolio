@@ -1,8 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-//Rutas
+import {HttpModule} from '@angular/http';
 
+//Rutas
 import {app_routing} from "./app.routes";
+
+//Servicios
+import {InformacionService} from "./services/informacion.service";
+
 
 //Componentes
 
@@ -24,9 +29,12 @@ import { PitemComponent } from './components/pitem/pitem.component';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     app_routing
   ],
-  providers: [],
+  providers: [
+    InformacionService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
