@@ -26,7 +26,7 @@ export class InformacionService {
   public carga_nosotros()
   {
     this.http.get("https://tienda-b9dda.firebaseio.com/equipo.json").subscribe(data => {
-      console.log(data.json());
+    //  console.log(data.json());
       this.cargada_nosotros = true;
       this.equipo = data.json();
     })
