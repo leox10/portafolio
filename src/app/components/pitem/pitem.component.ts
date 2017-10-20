@@ -5,7 +5,7 @@ import { ProductosService } from '../../services/productos.service';
 @Component({
   selector: 'app-pitem',
   templateUrl: './pitem.component.html'
-})
+}) 
 export class PitemComponent {
 
   producto:any=undefined;
@@ -20,7 +20,7 @@ export class PitemComponent {
        _ps.c_producto(parametros['id']).subscribe(res => {
                 this.cod=parametros['id'];
                 this.producto=res.json();
-                console.log(this.producto);
+              //  console.log(this.producto);
        });
     })
   }
