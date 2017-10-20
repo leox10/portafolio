@@ -13,6 +13,10 @@ export class ProductosService
   {
       this.carga_producto();
   }
+  public c_producto(id:string)
+  {
+    return this.http.get(`https://tienda-b9dda.firebaseio.com/productos/${id}.json`);
+  }
 
   public carga_producto()
   {
