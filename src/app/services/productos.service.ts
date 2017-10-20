@@ -21,8 +21,9 @@ export class ProductosService
       this.http.get('https://tienda-b9dda.firebaseio.com/productos_idx.json')
       .subscribe(res =>
       {
-        console.log(res.json());
+        //console.log(res.json());
         this.cargando_prod=false;
+        this.productos=res.json();
       })
 
   }
